@@ -1,0 +1,26 @@
+[
+  {
+    "uuid": "8cd62501-7c32-3996-b4b7-554a60776ee5",
+    "name": "CampusOne",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "63b06c7e-0d6f-3755-9786-9bbef2f312da",
+    "name": "sking388",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "20f68d15-516d-341f-a714-91293be43388",
+    "name": "RichkidRich",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "0b5209c4-8aab-3534-95cb-bbfa59b08b31",
+    "name": "Necrofreeze",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

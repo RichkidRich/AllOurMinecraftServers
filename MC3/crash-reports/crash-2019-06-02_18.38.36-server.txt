@@ -1,0 +1,369 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 2019-06-02, 6:38 p.m.
+Description: Watching Server
+
+java.lang.Error
+	at app//zb.a(SourceFile:57)
+	at app//yy$a.a(SourceFile:46)
+	at app//yy$a.a(SourceFile:32)
+	at app//cla.a(SourceFile:96)
+	at app//clb.a(SourceFile:99)
+	at app//aii.b(SourceFile:2702)
+	at app//aii.ax(SourceFile:1011)
+	at app//air.a(SourceFile:257)
+	at app//aii.a(SourceFile:558)
+	at app//air.e(SourceFile:1873)
+	at app//air.k(SourceFile:2296)
+	at app//ais.k(SourceFile:486)
+	at app//auk.k(SourceFile:38)
+	at app//ave.k(SourceFile:259)
+	at app//air.h(SourceFile:2111)
+	at app//ais.h(SourceFile:293)
+	at app//auk.h(SourceFile:50)
+	at app//ave.h(SourceFile:232)
+	at app//vg.a(SourceFile:580)
+	at app//vg$$Lambda$2673/0x00000008019a4040.accept(Unknown Source)
+	at app//bhi.a(SourceFile:676)
+	at app//vg.a(SourceFile:383)
+	at app//net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at app//ug.b(SourceFile:343)
+	at app//net.minecraft.server.MinecraftServer.a(SourceFile:764)
+	at app//net.minecraft.server.MinecraftServer.run(SourceFile:632)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at app//zb.a(SourceFile:57)
+	at app//yy$a.a(SourceFile:46)
+	at app//yy$a.a(SourceFile:32)
+	at app//cla.a(SourceFile:96)
+	at app//clb.a(SourceFile:99)
+	at app//aii.b(SourceFile:2702)
+	at app//aii.ax(SourceFile:1011)
+	at app//air.a(SourceFile:257)
+	at app//aii.a(SourceFile:558)
+	at app//air.e(SourceFile:1873)
+	at app//air.k(SourceFile:2296)
+	at app//ais.k(SourceFile:486)
+	at app//auk.k(SourceFile:38)
+	at app//ave.k(SourceFile:259)
+	at app//air.h(SourceFile:2111)
+	at app//ais.h(SourceFile:293)
+	at app//auk.h(SourceFile:50)
+	at app//ave.h(SourceFile:232)
+	at app//vg.a(SourceFile:580)
+	at app//vg$$Lambda$2673/0x00000008019a4040.accept(Unknown Source)
+	at app//bhi.a(SourceFile:676)
+	at app//vg.a(SourceFile:383)
+	at app//net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at app//ug.b(SourceFile:343)
+	at app//net.minecraft.server.MinecraftServer.a(SourceFile:764)
+
+-- Thread Dump --
+Details:
+	Threads: "Reference Handler" daemon prio=10 Id=2 RUNNABLE
+	at java.base@12.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@12.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+	at java.base@12.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+
+"Finalizer" daemon prio=8 Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@7a4b46e9
+	at java.base@12.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@7a4b46e9
+	at java.base@12.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@12.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@12.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+
+"Signal Dispatcher" daemon prio=9 Id=4 RUNNABLE
+
+
+"Common-Cleaner" daemon prio=8 Id=10 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@76fc9c9a
+	at java.base@12.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@76fc9c9a
+	at java.base@12.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@12.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+	at java.base@12.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+
+"Snooper Timer" daemon prio=5 Id=17 WAITING on java.util.TaskQueue@51d0eb93
+	at java.base@12.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@51d0eb93
+	at java.base@12.0.1/java.lang.Object.wait(Object.java:326)
+	at java.base@12.0.1/java.util.TimerThread.mainLoop(Timer.java:527)
+	at java.base@12.0.1/java.util.TimerThread.run(Timer.java:506)
+
+
+"Server Infinisleeper" daemon prio=5 Id=19 TIMED_WAITING
+	at java.base@12.0.1/java.lang.Thread.sleep(Native Method)
+	at app//ug$1.run(SourceFile:93)
+
+
+"AppKit Thread" daemon prio=5 Id=20 RUNNABLE
+
+
+"AWT-Shutdown" prio=5 Id=21 WAITING on java.lang.Object@5019e8cc
+	at java.base@12.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.Object@5019e8cc
+	at java.base@12.0.1/java.lang.Object.wait(Object.java:326)
+	at java.desktop@12.0.1/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Java2D Queue Flusher" daemon prio=10 Id=22 RUNNABLE
+	at java.desktop@12.0.1/sun.java2d.opengl.OGLRenderQueue.flushBuffer(Native Method)
+	at java.desktop@12.0.1/sun.java2d.opengl.OGLRenderQueue.flushBuffer(OGLRenderQueue.java:147)
+	at java.desktop@12.0.1/sun.java2d.opengl.OGLRenderQueue$QueueFlusher.run(OGLRenderQueue.java:228)
+	-  locked sun.java2d.opengl.OGLRenderQueue$QueueFlusher@5c81659e
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Java2D Disposer" daemon prio=10 Id=23 WAITING on java.lang.ref.ReferenceQueue$Lock@4e0b2ad8
+	at java.base@12.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@4e0b2ad8
+	at java.base@12.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@12.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.desktop@12.0.1/sun.java2d.Disposer.run(Disposer.java:144)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"AWT-EventQueue-0" prio=6 Id=24 WAITING on sun.java2d.opengl.OGLRenderQueue$QueueFlusher@5c81659e owned by "Java2D Queue Flusher" Id=22
+	at java.base@12.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on sun.java2d.opengl.OGLRenderQueue$QueueFlusher@5c81659e
+	at java.base@12.0.1/java.lang.Object.wait(Object.java:326)
+	at java.desktop@12.0.1/sun.java2d.opengl.OGLRenderQueue$QueueFlusher.flushNow(OGLRenderQueue.java:178)
+	at java.desktop@12.0.1/sun.java2d.opengl.OGLRenderQueue.flushNow(OGLRenderQueue.java:123)
+	at java.desktop@12.0.1/sun.java2d.opengl.OGLBlitLoops.IsoBlit(OGLBlitLoops.java:373)
+	at java.desktop@12.0.1/sun.java2d.opengl.OGLRTTSurfaceToSurfaceBlit.Blit(OGLBlitLoops.java:463)
+	at java.desktop@12.0.1/sun.java2d.pipe.DrawImage.blitSurfaceData(DrawImage.java:972)
+	at java.desktop@12.0.1/sun.java2d.pipe.DrawImage.renderImageCopy(DrawImage.java:583)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@1851dcf9
+
+
+"TimerQueue" daemon prio=5 Id=26 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@50eb204e
+	at java.base@12.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@50eb204e
+	at java.base@12.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:235)
+	at java.base@12.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+	at java.base@12.0.1/java.util.concurrent.DelayQueue.take(DelayQueue.java:229)
+	at java.desktop@12.0.1/javax.swing.TimerQueue.run(TimerQueue.java:171)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@79118b7
+
+
+"Thread-1" daemon prio=5 Id=25 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@47a18d61
+	at java.base@12.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@47a18d61
+	at java.base@12.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@12.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@12.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//com.mojang.util.QueueLogAppender.getNextLogEvent(QueueLogAppender.java:77)
+	at app//um.a(SourceFile:137)
+	at app//um$$Lambda$2066/0x000000080174c440.run(Unknown Source)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Server thread" prio=5 Id=18 RUNNABLE
+	at app//zb.a(SourceFile:57)
+	at app//yy$a.a(SourceFile:46)
+	at app//yy$a.a(SourceFile:32)
+	at app//cla.a(SourceFile:96)
+	at app//clb.a(SourceFile:99)
+	at app//aii.b(SourceFile:2702)
+	at app//aii.ax(SourceFile:1011)
+	at app//air.a(SourceFile:257)
+	...
+
+
+"Server console handler" daemon prio=5 Id=27 RUNNABLE (in native)
+	at java.base@12.0.1/java.io.FileInputStream.readBytes(Native Method)
+	at java.base@12.0.1/java.io.FileInputStream.read(FileInputStream.java:273)
+	at java.base@12.0.1/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+	at java.base@12.0.1/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	-  locked java.io.BufferedInputStream@51013778
+	at java.base@12.0.1/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base@12.0.1/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base@12.0.1/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@5edad94f
+	at java.base@12.0.1/java.io.InputStreamReader.read(InputStreamReader.java:185)
+	...
+
+
+"DestroyJavaVM" prio=5 Id=29 RUNNABLE
+
+
+"ObjectCleanerThread" daemon prio=1 Id=30 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@57ba6b8a
+	at java.base@12.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@57ba6b8a
+	at java.base@12.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at app//io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Netty Server IO #0" daemon prio=5 Id=31 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@1cbb3e99
+	-  locked sun.nio.ch.KQueueSelectorImpl@44d97081
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Server Watchdog" daemon prio=5 Id=32 RUNNABLE
+	at java.management@12.0.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@12.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:502)
+	at java.management@12.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:490)
+	at app//uj.run(SourceFile:45)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Netty Server IO #1" daemon prio=5 Id=33 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@4c41d9f4
+	-  locked sun.nio.ch.KQueueSelectorImpl@48a30dcd
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Netty Server IO #2" daemon prio=5 Id=34 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@d29bdb6
+	-  locked sun.nio.ch.KQueueSelectorImpl@27b89ea
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Netty Server IO #3" daemon prio=5 Id=35 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@40b76e28
+	-  locked sun.nio.ch.KQueueSelectorImpl@102ade96
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Netty Server IO #4" daemon prio=5 Id=44 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@502e0528
+	-  locked sun.nio.ch.KQueueSelectorImpl@e44e21e
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Netty Server IO #5" daemon prio=5 Id=45 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@75f90bd0
+	-  locked sun.nio.ch.KQueueSelectorImpl@33e1b597
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Netty Server IO #6" daemon prio=5 Id=49 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@13c6e186
+	-  locked sun.nio.ch.KQueueSelectorImpl@3abbb5f2
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Server-Worker-21" daemon prio=5 Id=56 TIMED_WAITING on java.util.concurrent.ForkJoinPool@7a18efe
+	at java.base@12.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@7a18efe
+	at java.base@12.0.1/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:276)
+	at java.base@12.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1619)
+	at java.base@12.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Netty Server IO #7" daemon prio=5 Id=57 RUNNABLE
+	at java.base@12.0.1/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@12.0.1/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	-  locked sun.nio.ch.Util$2@3952ce90
+	-  locked sun.nio.ch.KQueueSelectorImpl@1d3cc2ed
+	at java.base@12.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:411)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.base@12.0.1/java.lang.Thread.run(Thread.java:835)
+
+
+"Server-Worker-23" daemon prio=5 Id=68 TIMED_WAITING on java.util.concurrent.ForkJoinPool@7a18efe
+	at java.base@12.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@7a18efe
+	at java.base@12.0.1/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:276)
+	at java.base@12.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1619)
+	at java.base@12.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Server-Worker-24" daemon prio=5 Id=69 WAITING on java.util.concurrent.ForkJoinPool@7a18efe
+	at java.base@12.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@7a18efe
+	at java.base@12.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@12.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+	at java.base@12.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+
+Stacktrace:
+	at uj.run(SourceFile:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.14.2
+	Operating System: Mac OS X (x86_64) version 10.14.5
+	Java Version: 12.0.1, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 301915144 bytes (287 MB) / 2356150272 bytes (2247 MB) up to 4294967296 bytes (4096 MB)
+	JVM Flags: 2 total; -Xms1G -Xmx4G
+	Player Count: 3 / 7; [vh['RichkidRich'/302739, l='world', x=-103.06, y=32.00, z=-19.38], vh['Chanksy'/302740, l='world', x=-110.76, y=32.00, z=-20.47], vh['TW@ ERIK'/302741, l='world', x=-299.58, y=70.00, z=-273.79]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
